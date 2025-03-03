@@ -13,7 +13,7 @@ This document outlines the process for creating branches and commits in our proj
 - Branch names should be descriptive and follow this convention:
   - Format: `<type>/<project-key>-<task-number>-<short-description>`
   - Types:
-    - `feature` (for new features)
+    - `feat` (for new features)
     - `bugfix` (for bug fixes)
     - `hotfix` (for urgent production fixes)
     - `refactor` (for code improvements without functional changes)
@@ -21,7 +21,7 @@ This document outlines the process for creating branches and commits in our proj
   - Project Key: A short identifier for the project (e.g., `CBP`).
   - Task Number: The specific task identifier (e.g., `123`).
   - Examples:
-    - `feature/CBP-123-add-user-authentication`
+    - `feat/CBP-123-add-user-authentication`
     - `bugfix/CBP-456-fix-login-error`
     - `refactor/CBP-789-cleanup-api-endpoints`
 - Keep branches focused on a single task or purpose to maintain clarity and simplicity.
