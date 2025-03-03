@@ -11,7 +11,7 @@ This document outlines the process for creating branches and commits in our proj
 ### 2. Task Branches
 - For each task, feature, bug fix, or improvement, create a new branch off the `main` branch (unless specified otherwise or for some valid reason).
 - Branch names should be descriptive and follow this convention:
-  - Format: `<type>/<project-key>-<task-number>-<short-description>`
+  - Format: `<type>/<project-key>-<task-number>/<short-description>`
   - Types:
     - `feat` (for new features)
     - `bugfix` (for bug fixes)
@@ -21,9 +21,9 @@ This document outlines the process for creating branches and commits in our proj
   - Project Key: A short identifier for the project (e.g., `CBP`).
   - Task Number: The specific task identifier (e.g., `123`).
   - Examples:
-    - `feat/CBP-123-add-user-authentication`
-    - `bugfix/CBP-456-fix-login-error`
-    - `refactor/CBP-789-cleanup-api-endpoints`
+    - `feat/CBP-123/add-user-authentication`
+    - `bugfix/CBP-456/fix-login-error`
+    - `refactor/CBP-789/cleanup-api-endpoints`
 - Keep branches focused on a single task or purpose to maintain clarity and simplicity.
 
 ### 3. Creating a Branch
@@ -38,7 +38,7 @@ This document outlines the process for creating branches and commits in our proj
 ``` 
 Example:
 ```bash
-  git checkout -b feature/CBP-123-add-user-authentication
+  git checkout -b feature/CBP-123/add-user-authentication
 ```
 ## Commit Guidelines
 
@@ -75,7 +75,7 @@ Example:
 - Stage and commit your changes:
 ```bash
   git add <files>
-  git commit -m "feat(auth): add login endpoint (CBP-123)"
+  git commit -m "feat(auth): CBP-123 add login endpoint"
 ```
 - Push your branch to the remote repository:
 ```bash
@@ -89,28 +89,28 @@ Example:
 ```
    - Create a branch:
 ```bash
-  git checkout -b feature/CBP-123-add-user-authentication
+  git checkout -b feature/CBP-123/add-user-authentication
 ```
 
 2. Work on the Task:
    - Make changes and commit:
 ```bash
      git add .
-     git commit -m "feat(auth): add login form validation (CBP-123)"
+     git commit -m "feat(auth): CBP-123 add login form validation"
 ```
    
    - Add more commits as needed:
 ```bash
      git add .
-     git commit -m "test(auth): add unit tests for login form (CBP-123)"
+     git commit -m "test(auth): CBP-123 add unit tests for login form"
 ```
    
 3. Push the Branch:
 ```bash
-   git push origin feature/CBP-123-add-user-authentication
+   git push origin feature/CBP-123/add-user-authentication
 ```
 4. Create a Pull Request:
-   - Open a PR from `feature/CBP-123-add-user-authentication` to `main`.
+   - Open a PR from `feature/CBP-123/add-user-authentication` to `main`.
    - Include a description of the changes and reference the task (`CBP-123`).
    - Fill the template with the required fields.
 5. Merge into Main:
@@ -120,12 +120,12 @@ Example:
 ## Additional Notes
 - Rebasing: If your branch falls behind main, rebase it to keep history linear:
 ```bash
-  git checkout feature/CBP-123-add-user-authentication
+  git checkout feature/CBP-123/add-user-authentication
   git rebase main
 ```
   Resolve conflicts if necessary, then push:
 ```bash
-  git push origin feature/CBP-123-add-user-authentication
+  git push origin feature/CBP-123/add-user-authentication
 ```
 - Code Reviews: All PRs must be reviewed and approved by at least one team member before merging.
 - Keep Branches Short-Lived: Aim to complete and merge task branches quickly to avoid long-running branches.
