@@ -38,7 +38,7 @@ This document outlines the process for creating branches and commits in our proj
 ``` 
 Example:
 ```bash
-  git checkout -b feature/CBP-123/add-user-authentication
+  git checkout -b feat/CBP-123/add-user-authentication
 ```
 ## Commit Guidelines
 
@@ -62,13 +62,27 @@ Example:
     - `refactor(api): PRIGT-789 simplify error handling`
 
 ### 2. Writing Good Commits
-- Keep messages clear and concise (50-72 characters for the first line).
-- If more detail is needed, add a blank line after the first line and provide additional context:
+Good commits follow best practices to ensure they’re clear, useful, and easy to track. Here are some guidelines:
+
+**Descriptive and Concise Messages:**
+- Write a message that explains what the change does and, if needed, why.
+- Keep the first line short (under 50-72 characters) as a summary, and add more details in additional lines if necessary. Example:
 ```
   feat(auth): implement JWT token validation (CBP-123)
   Added middleware to validate JWT tokens on protected routes.
   Updated unit tests to cover token expiration cases.
 ```
+
+**Atomicity:**
+- Each commit should represent a single, logical, complete change. Avoid mixing unrelated changes (e.g., bug fixes and new features in the same commit).
+
+**Use the Right Verb Tense:**
+- Write messages in the present imperative tense (e.g., "Add login function" instead of "Added login function"). This is a common convention in tools like Git.
+  
+**Avoid Unnecessary Changes:**
+- Don’t include auto-generated files or irrelevant changes (like whitespace edits without purpose).
+- If more detail is needed, add a blank line after the first line and provide additional context:
+
 - Commit early and often, but ensure each commit is functional (e.g., does not break the build).
 
 ### 3. Committing Changes
@@ -89,7 +103,7 @@ Example:
 ```
    - Create a branch:
 ```bash
-  git checkout -b feature/CBP-123/add-user-authentication
+  git checkout -b feat/CBP-123/add-user-authentication
 ```
 
 2. Work on the Task:
@@ -107,10 +121,10 @@ Example:
    
 3. Push the Branch:
 ```bash
-   git push origin feature/CBP-123/add-user-authentication
+   git push origin feat/CBP-123/add-user-authentication
 ```
 4. Create a Pull Request:
-   - Open a PR from `feature/CBP-123/add-user-authentication` to `main`.
+   - Open a PR from `feat/CBP-123/add-user-authentication` to `main`.
    - Include a description of the changes and reference the task (`CBP-123`).
    - Fill the template with the required fields.
 5. Merge into Main:
@@ -120,12 +134,12 @@ Example:
 ## Additional Notes
 - Rebasing: If your branch falls behind main, rebase it to keep history linear:
 ```bash
-  git checkout feature/CBP-123/add-user-authentication
+  git checkout feat/CBP-123/add-user-authentication
   git rebase main
 ```
   Resolve conflicts if necessary, then push:
 ```bash
-  git push origin feature/CBP-123/add-user-authentication
+  git push origin feat/CBP-123/add-user-authentication
 ```
 - Code Reviews: All PRs must be reviewed and approved by at least one team member before merging.
 - Keep Branches Short-Lived: Aim to complete and merge task branches quickly to avoid long-running branches.
