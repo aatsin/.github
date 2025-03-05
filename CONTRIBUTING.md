@@ -44,6 +44,7 @@ Example:
 
 ### 1. Commit Structure
 - Commits should be small, logical, and self-contained units of work.
+- Commits should all be in lowercase.
 - Each commit message must follow this format:
   - Format: `<type>(<scope>): <project-key>-<task-number> <short-description>`
   - Types:
@@ -57,9 +58,9 @@ Example:
   - Project Key: The project identifier (e.g., `CBP`).
   - Task Number: The specific task identifier (e.g., `123`).
   - Examples:
-    - `feat(auth): CBP-123 add login endpoint`
-    - `fix(ui): CF-456 correct button alignment on mobile`
-    - `refactor(api): PRIGT-789 simplify error handling`
+    - `feat(auth): cbp-123 add login endpoint`
+    - `fix(ui): cf-456 correct button alignment on mobile`
+    - `refactor(api): prigt-789 simplify error handling`
 
 ### 2. Writing Good Commits
 Good commits follow best practices to ensure they’re clear, useful, and easy to track. Here are some guidelines:
@@ -89,7 +90,7 @@ Good commits follow best practices to ensure they’re clear, useful, and easy t
 - Stage and commit your changes:
 ```bash
   git add <files>
-  git commit -m "feat(auth): CBP-123 add login endpoint"
+  git commit -m "feat(auth): cbp-123 add login endpoint"
 ```
 - Push your branch to the remote repository:
 ```bash
@@ -110,13 +111,13 @@ Good commits follow best practices to ensure they’re clear, useful, and easy t
    - Make changes and commit:
 ```bash
      git add .
-     git commit -m "feat(auth): CBP-123 add login form validation"
+     git commit -m "feat(auth): cbp-123 add login form validation"
 ```
    
    - Add more commits as needed:
 ```bash
      git add .
-     git commit -m "test(auth): CBP-123 add unit tests for login form"
+     git commit -m "test(auth): cbp-123 add unit tests for login form"
 ```
    
 3. Push the Branch:
